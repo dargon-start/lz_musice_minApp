@@ -1,0 +1,22 @@
+/* pages/home-search/index.wxss */
+.hots{
+  height: 300rpx;
+}
+.hots .hot_item{
+  display: inline-block;
+  padding: 10rpx ;
+  border-radius: 20rpx;
+  margin: 10rpx;
+  background-color: #fff;
+}
+.hot_item:first-child{
+  color: rgb(41, 184, 41);
+}
+.search_sug .sugget_item{
+  display: flex;
+  align-items: center;
+}
+.search_sug .search_icon{
+  width: 80rpx;
+  height: 80rpx;
+}

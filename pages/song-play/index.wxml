@@ -1,0 +1,51 @@
+<!--pages/song-play/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<!-- 背景 -->
+<image class="bg_img" mode="widthFill" src="{{songInfo.al.picUrl}}"></image>
+<view class="bg_blur"></view>
+<!-- 自定义导航栏 -->
+<nav-bar>
+  <view slot="title"  class="tab">
+      <view class="{{currentPage === 0 ? 'active': ''}}">歌曲</view>
+      <view class="divider">|</view>
+      <view class="{{currentPage === 1 ? 'active': ''}}">歌词</view>
+  </view>
+</nav-bar>
+
+<!-- 内容 -->
+<swiper class="content" bind:change='changePage'>
+  <!-- 歌曲页 -->
+  <swiper-item class="item1">
+    <view class="album">
+      <image class="album_img" mode="aspectFill" src="{{songInfo.al.picUrl}}"></image>
+    </view>
+    <view class="artistInfo">
+        <view class="songName">{{songInfo.name}}</view>
+        <view>{{songInfo.ar[0].name}}</view>
+        <view>专辑：{{songInfo.alia[0]}}</view>
+    </view>
+    <view class="lyrics">{{currentLyric}}</view>
+    <view class="progress-box">
+      <slider class="slider" 
+              block-size="{{12}}"
+              value="{{sliderValue}}"
+              bindchanging="handleSliderChanging"
+              bindchange="handleSliderChange">
+      </slider>
+      <view class="time">
+        <view class="current">{{format.formatTime(currentTime)}}</view>
+        <view class="duration">{{format.formatTime(durationTime)}}</view>
+      </view>
+    </view>
+    <view class="opertaion">
+        <image src="../../assets/images/player/play_order.png" class="icon "></image>
+        <image src="../../assets/images/player/play_prev.png" class="icon "></image>
+        <image src="../../assets/images/player/play_pause.png" class="icon pause" bindtap="onPause" wx:if="{{!isPause}}"></image>
+        <image src="../../assets/images/player/play_resume.png" wx:if="{{isPause}}" class="icon pause" bindtap="onPause"></image>
+        <image src="../../assets/images/player/play_next.png" class="icon "></image>
+        <image src="../../assets/images/player/play_music.png" class="icon "></image>
+    </view>
+  </swiper-item>
+  <!-- 歌词页 -->
+  <swiper-item>2</swiper-item>
+</swiper>

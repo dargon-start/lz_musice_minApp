@@ -1,0 +1,19 @@
+/* pages/home-music/index.wxss */
+page{
+  padding: 0 20rpx;
+}
+
+
+.swiper{
+  width: 100%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.swiper .swiper-item{
+  display: flex;
+  height: 100%;
+}
+.swiper .swiper_item .swiper_image{
+  width: 100%;
+}

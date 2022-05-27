@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "video_rel_item":"/components/video_rel_item/index"
+  }
+}

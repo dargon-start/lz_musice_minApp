@@ -1,0 +1,17 @@
+<!--components/rec_song/index.wxml-->
+<scroll-view scroll-x='true' enhanced='true' paging-enabled='true'  show-scrollbar='false' class="scroll_view" >
+        <!-- 类型遍历 -->
+        <view wx:for="{{songlist}}" wx:key="index" class="scroll_item">
+          <sub-header title='{{item.sType}}' titleStyle='font-size:32rpx;'>
+            <image src="../../assets/images/icons/more_icon.png" mode="widthFix" class="more_icon" bindtap="toPlaylistPage" data-type="{{item.sType}}"></image>
+          </sub-header>
+        <!-- 歌单 -->
+          <view wx:for="{{item.sList}}" wx:key="id" class="songList" data-id="{{item.id}}" bindtap="toPlayPage">
+            <image src="{{item.album.blurPicUrl}}" class="songImg"></image>
+            <view class="song_info">
+              <view class="song_name">{{item.name}}</view>
+              <view class="song_artName">{{item.album.artists[0].name}}</view>
+            </view>
+          </view>
+        </view>
+  </scroll-view>

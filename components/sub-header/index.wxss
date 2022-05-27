@@ -1,0 +1,29 @@
+/* components/sub-header/index.wxss */
+.sub-header{
+  display: flex;
+  width: 100%;
+  padding: 10rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title{
+  font-size: 38rpx;
+  font-weight: 600;
+}
+
+ .slot:empty + .default{
+  display: flex;
+}
+
+.header-right  .default{
+  display: none;
+  align-items: center;
+}
+.default .more{
+  font-size: 30rpx;
+}
+.default .arrow-right{
+  width: 70rpx;
+  height: 70rpx;
+}

@@ -1,0 +1,29 @@
+/* components/rec_item/index.wxss */
+.rec-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rpx 0;
+}
+
+.rec-item .rec-img{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}
+.rec-item .item-info{
+  padding: 16rpx;
+  flex:1;
+  font-size: 32rpx;
+}
+.rec-item .item-info .nickname{
+  font-size: 30rpx;
+  color: #7a7676;
+}
+
+
+
+.rec-item .rec-right{
+  width: 60rpx;
+  height: 60rpx;
+}

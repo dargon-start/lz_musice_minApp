@@ -1,0 +1,13 @@
+<!--components/sub-header/index.wxml-->
+<view class="sub-header">
+  <view class="title" style='{{titleStyle}}'>{{title}}</view>
+  <view class="header-right">
+    <view class="slot">
+      <slot></slot>
+    </view>
+    <view class="default" wx:if="{{isShowMore}}">
+      <view class="more">更多</view>
+      <image src="/assets/images/icons/arrow-right.png" class="arrow-right"></image>
+    </view>
+  </view>
+</view>

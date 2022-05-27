@@ -1,0 +1,32 @@
+<!--pages/home-music/index.wxml-->
+<!-- 搜索框 -->
+<van-search shape='round' 
+            background='#fafafa' 
+            disabled
+            bind:click-input="onClickInput"
+            ></van-search>
+<!-- 轮播图 -->
+<swiper 
+	indicator-dots 
+  autoplay
+  circular
+  class="swiper"
+  style="height: {{swiperHeight}}px;">
+  <swiper-item wx:for="{{banners}}" wx:key="bannerId" class="swiper_item">
+    <image src="{{item.pic}}" class="swiper_image" mode="widthFix" bindload='imgLoaded'></image>
+  </swiper-item>
+</swiper>
+<!-- 推荐歌单 -->
+<sub-header title='推荐歌单' isShowMore='{{false}}'></sub-header>
+<view class="recommend">
+  <block wx:for="{{recommnedList}}" wx:key="id">
+    <rec-item item='{{item}}' isshow='{{true}}' data-id="{{item.id}}" bindtap="toPlaylistPage"></rec-item>
+  </block>
+</view>
+
+<!-- 热门歌单 -->
+<sub-header title='热门歌单' isShowMore='{{false}}'></sub-header>
+<hot-song hotList='{{hotList}}'></hot-song>
+<!-- 新歌速递 -->
+<sub-header title='新歌速递' isShowMore='{{false}}'></sub-header>
+<rec-song songlist='{{newSongs}}'></rec-song>

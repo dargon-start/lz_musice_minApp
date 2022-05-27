@@ -1,0 +1,9 @@
+<!--components/rec_item/index.wxml-->
+<view class="rec-item">
+  <image src="{{item.coverImgUrl}}" class="rec-img"></image>
+  <view class="item-info">
+    <view class="name">{{item.name}}</view>
+    <view class="nickname">{{item.creator.nickname}}</view>
+  </view>
+  <image src="/assets/images/icons/arrow-right.png" class="rec-right" wx:if="{{isshow}}"></image>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/home-search/index.wxml-->
+<van-search shape='round' 
+            background='#fafafa' 
+            bind:click-input="onClickInput"
+            bind:change='getSuggest'
+            bind:search='getResult'
+            bind:focus='clearInfo'
+            value="{{keyword}}"
+            ></van-search>
+<!-- 热门搜索-->
+<block wx:if="{{!suggestList.length && !searchResult.length}}">
+  <sub-header title='热门搜索' isShowMore="{{false}}"></sub-header>
+  <view class="hots">
+    <block wx:for="{{hotList}}" wx:key="first">
+      <text class="hot_item" bindtap="getResult" data-key="{{item.first}}">{{item.first}}</text>
+    </block>
+  </view>
+</block>
+<!-- 搜索建议 -->
+<view class="search_sug" wx:if="{{!searchResult.length}}">
+  <block wx:for="{{suggestList}}" wx:key="keyword">
+    <view class="sugget_item" bindtap="getResult" data-key="{{item.keyword}}">
+      <image src="../../assets/images/icons/search_icon.png" class="search_icon"></image>
+      <text class="keyword">{{item.keyword}}</text>
+    </view>
+  </block>
+</view>
+
+<!-- 搜索结果 -->
+<block wx:if="{{searchResult.length}}">
+  <block wx:for="{{searchResult}}" wx:key="id" >
+     <song-item item="{{item}}" index='{{index+1}}'></song-item>
+  </block>
+</block>

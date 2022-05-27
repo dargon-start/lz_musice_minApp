@@ -1,0 +1,40 @@
+/* components/rec_song/index.wxss */
+.scroll_view{
+  position: relative;
+  width: 100vw;
+  white-space: nowrap;
+  left: -20rpx;
+}
+.scroll_item{
+  display: inline-block;
+  width: 90vw;
+  vertical-align: text-top;
+  font-size: 40rpx;
+  padding: 10rpx;
+  margin: 0rpx 10rpx;
+  border-radius: 10rpx;
+}
+.scroll_item:last-child{
+  margin-right: 50rpx;
+}
+.songList{
+  display: flex;
+  align-items: center;
+  margin: 15rpx 10rpx;
+}
+
+.songList .songImg{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 15rpx;
+  margin-right: 25rpx;
+}
+.songList .song_info .song_artName{
+  font-size: 30rpx;
+  color: #7a7676;
+}
+
+.more_icon{
+  width: 50rpx;
+  height: 50rpx;
+}

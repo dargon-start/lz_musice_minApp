@@ -1,0 +1,12 @@
+/* pages/home-video/index.wxss */
+.video_list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.video_list .item{
+  width: 47%;
+}
+

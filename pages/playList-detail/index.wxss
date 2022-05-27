@@ -1,0 +1,97 @@
+/* pages/playList-detail/index.wxss */
+page{
+  padding: 10rpx;
+}
+
+.top_creator{
+  position: relative;
+  width: 100vw;
+  height: 450rpx;
+  left: -10rpx;
+  overflow: hidden;
+  color: #fff;
+}
+.top_creator .bg_img{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.top_creator .bg_cover{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  backdrop-filter: blur(5px);
+}
+.content {
+  display: flex;
+  margin-top: 60rpx;
+  padding: 0 50rpx;
+}
+.content .left_image {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 16rpx;
+}
+
+.content .right_info {
+  position: relative;
+  height: 220rpx;
+  flex: 1;
+  margin-left: 50rpx;
+}
+.right_info .avatar_img{
+  width: 80rpx;  
+  height: 80rpx;
+  border-radius: 50%;
+  vertical-align: center;
+
+}
+.right_info .avatar_info{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.right_info .des{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.avatar_info .nickName{
+    font-size: 28rpx;
+    margin-left: 18rpx;
+}
+
+.operation {
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx;
+  margin-top: 30rpx;
+}
+
+.operation .item {
+  display: flex;
+  align-items: center;
+}
+
+.operation .item .icon {
+  width: 48rpx;
+  margin-right: 10rpx;
+}
+
+.operation .item .text {
+  font-size: 28rpx;
+}

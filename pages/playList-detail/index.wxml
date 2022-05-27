@@ -1,0 +1,36 @@
+<!--pages/playList-detail/index.wxml-->
+<!-- 顶部 -->
+<sub-header wx:if="{{type}}" title='新歌速递·{{type}}' isShowMore='{{false}}' class="" ></sub-header>
+<!-- 歌单信息展示 -->
+<view class="top_creator" wx:if="{{!type}}">
+  <!-- 背景图 -->
+  <image src="{{playList.coverImgUrl}}" class="bg_img" mode="aspectFill"></image>
+  <view class="bg_cover"></view>
+  <view class="content">
+    <image src="{{playList.coverImgUrl}}" class="left_image"></image>
+    <view class="right_info">
+      <view>{{playList.name}}</view>
+      <view class="avatar_info">
+        <image src="{{playList.creator.avatarUrl}}" class="avatar_img"></image>
+        <text class="nickName">{{playList.creator.nickname}}</text>
+      </view>
+      <view class="des">简介：{{playList.description}}</view>
+    </view>
+  </view>
+  <view class="operation">
+    <view class="like item">
+      <image src="../../assets/images/icons/favor_icon.png" mode="widthFix" class="icon"></image>
+      <text class="text">{{playList.playCount}}</text>
+    </view>
+    <view class="share item">
+      <image src="../../assets/images/icons/share_icon.png" mode="widthFix" class="icon"></image>
+      <text class="text">分享</text>
+    </view>
+  </view>
+</view>
+<!-- 列表 -->
+<view class="playList">
+ <block wx:for="{{tracks}}" wx:key="id">
+  <song-item item='{{item}}' index='{{index+1}}'></song-item>
+ </block>
+</view>

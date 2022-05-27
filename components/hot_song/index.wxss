@@ -1,0 +1,26 @@
+/* components/hot_song/index.wxss */
+.scroll_view{
+  position: relative;
+  width: 100vw;
+  white-space: nowrap;
+
+  left: -20rpx;
+}
+.scroll_item{
+  display: inline-block;
+  width: 270rpx;
+  height:300rpx;
+  text-align: center;
+  vertical-align: text-top;
+  font-size: 30rpx;
+}
+.scroll_item .img{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 10rpx;
+}
+.scroll_item .name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

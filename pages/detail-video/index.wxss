@@ -1,0 +1,31 @@
+/* pages/detail-video/index.wxss */
+page{
+  padding-top: 225px;
+}
+.mv{
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  width: 100%;
+}
+.vide_info{
+  width: 100%;
+  padding: 10rpx;
+  line-height: 52rpx;
+}
+.vide_info .mv_name{
+  font-weight: 600;
+}
+.vide_info .mv_artistName{
+  font-size: 30rpx;
+  color:#575454;
+}
+.vide_info .mv_otherInfo{
+  font-size: 30rpx;
+  color:#575454;
+}
+
+.mv_related .rel_title{
+  margin: 14rpx;
+  font-weight: 600;
+}

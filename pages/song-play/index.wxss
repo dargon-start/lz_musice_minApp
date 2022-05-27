@@ -1,0 +1,104 @@
+/* pages/song-play/index.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.bg_img{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.bg_blur{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  backdrop-filter: blur(40px);
+}
+.tab{
+  display: flex;
+  color: rgb(151, 140, 140);
+}
+.tab .divider{
+  margin: 0 8rpx;
+}
+.tab .active{
+  color: #fff;
+}
+
+.content{
+  flex: 1;
+  padding: 20rpx;
+  padding: 50rpx 60rpx;
+}
+
+.item1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.item1 .album{
+  flex: 6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx;
+}
+.item1 .album  .album_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 14rpx;
+}
+.item1 .artistInfo{
+  width: 100%;
+  font-size: 32rpx;
+  color: #e7e7e0;
+  margin: 20rpx;
+}
+.item1 .artistInfo view{
+  margin: 14rpx 0;
+}
+.item1 .artistInfo .songName{
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.item1 .lyrics{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: #74f074;
+  font-size: 32rpx;
+}
+.progress-box{
+  width: 100%;
+  margin: 60rpx;
+}
+.progress-box .time{
+  display: flex;
+  justify-content: space-between;
+  padding:0 15rpx;
+}
+.opertaion{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.opertaion .icon{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.opertaion .pause{
+  width: 130rpx;
+  height: 130rpx;
+}

@@ -1,0 +1,14 @@
+<!--components/vide_rel_item/index.wxml-->
+<wxs src='../../utils/format.wxs' module="format"></wxs>
+<view class="rel_item">
+  <view class="left_img">
+    <image src="{{item.coverUrl}}" mode='widthFix'></image>
+    <view class="img_info">
+          <text class="duration">{{format.formatTime(item.durationms)}}</text>
+    </view>
+  </view>
+  <view class="right_info">
+    <view class="title">{{item.title}}</view>
+    <view class="userName">{{item.creator[0].userName}}</view>
+  </view>
+</view>

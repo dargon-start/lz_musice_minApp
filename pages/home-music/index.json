@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "sub-header":"/components/sub-header/index",
+    "rec-item":"/components/rec_item/index",
+    "hot-song":"/components/hot_song/index",
+    "rec-song":"/components/rec_song/index"
+  }
+}
